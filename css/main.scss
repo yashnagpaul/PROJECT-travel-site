@@ -1,0 +1,184 @@
+html,
+body {
+  box-sizing: border-box;
+  font-family: Verdana;
+  margin: -4;
+}
+
+* {
+  box-sizing: inherit;
+  font-family: inherit;
+  margin: inherit;
+}
+
+/* ===========
+NAVIGATION BAR
+=========== */
+
+.nav-bar {
+  display: flex;
+  z-index: 999;
+  position: fixed;
+  min-width: 100vw;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 1%;
+}
+
+.nav-bar__logo {
+  display: flex;
+  flex-direction: row;
+  color: #2d3982;
+  margin-left: 2%;
+}
+
+.nav-bar__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 4%;
+}
+
+.nav-bar__list-item {
+  padding: 2% 0.5em;
+}
+
+.nav-bar__links {
+  text-decoration: none;
+  color: darkslategray;
+  transition: 0.3s;
+}
+
+.nav-bar__list-item--underlined {
+  border-bottom: solid 2px #e37889;
+}
+
+/* =============
+HERO SECTION CSS
+============= */
+
+.hero-section {
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-around;
+  padding: 20vh 10vw;
+  min-height: 65vh;
+  align-items: center;
+}
+
+.hero-section__left-side {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 60vw;
+}
+
+.hero-section__heading {
+  justify-content: left;
+  font-size: 2.5rem;
+  font-family: "Comic Sans MS";
+  color: #101d42;
+}
+
+.hero-section__paragraph {
+  padding-right: 2vw;
+  margin: 4vh auto;
+}
+
+.hero-section__button {
+  position: relative;
+  background-color: #5969d0;
+  color: #ffffff;
+  min-width: 10vw;
+  border-radius: 40px;
+  border: 0;
+  padding: 1.5vh 3.5vw;
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    border: black 2px solid;
+    left: -1%;
+    top: -1%;
+  }
+}
+
+.hero-section__right-side {
+  max-width: 40vw;
+}
+
+.hero-section__hero-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* ============
+RECOMMENDATIONS
+============ */
+
+.recommendations-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommendations-heading {
+  color: #101d42;
+  margin: 3% 0 0 5%;
+}
+
+.recommendation-cards {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  min-width: 275px;
+  min-height: 400px;
+  max-width: 20%;
+  max-height: 25em;
+  margin: 3% 2% 6%;
+  position: relative;
+}
+
+.recommendation-cards__hawaii {
+  background: url(../assets/hawaii.jpg);
+  background-size: cover;
+  background-clip: content-box;
+}
+
+.recommendation-cards__iceland {
+  background: url(../assets/iceland.jpg);
+  background-size: cover;
+  background-clip: content-box;
+}
+.recommendation-cards__greece {
+  background: url(../assets/greece.jpg);
+  background-size: cover;
+  background-clip: content-box;
+}
+
+.recommendation-cards__names {
+  color: white;
+  position: absolute;
+  bottom: 2%;
+  right: 4%;
+}
+
+/* ==========
+DIVING DEEPER
+========== */
+
+a.nav-bar__links:hover {
+  box-sizing: content-box;
+  color: white;
+  background-color: #5969d0;
+  border-radius: 4px;
+  padding: 1px 1px;
+}
+
+a.recommendation-cards:hover {
+  border: 1px solid rgba(0, 0, 0, 0.9);
+}
